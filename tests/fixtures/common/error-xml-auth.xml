@@ -1,0 +1,7 @@
+<OpenAPI_ServiceResponse>
+  <cmmMsgHeader>
+    <errMsg>SERVICE_KEY_IS_NOT_REGISTERED_ERROR</errMsg>
+    <returnAuthMsg>인증키가 등록되지 않았습니다.</returnAuthMsg>
+    <returnReasonCode>20</returnReasonCode>
+  </cmmMsgHeader>
+</OpenAPI_ServiceResponse>

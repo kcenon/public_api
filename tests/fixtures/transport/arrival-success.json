@@ -1,0 +1,37 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL_SERVICE"
+    },
+    "body": {
+      "items": {
+        "item": [
+          {
+            "arrprevstationcnt": 3,
+            "arrtime": 420,
+            "nodeid": "GMB137",
+            "nodenm": "시청앞",
+            "routeid": "GGB100",
+            "routeno": 100,
+            "routetp": "일반버스",
+            "vehicletp": "저상버스"
+          },
+          {
+            "arrprevstationcnt": 7,
+            "arrtime": 900,
+            "nodeid": "GMB137",
+            "nodenm": "시청앞",
+            "routeid": "GGB200",
+            "routeno": 200,
+            "routetp": "좌석버스",
+            "vehicletp": "일반버스"
+          }
+        ]
+      },
+      "numOfRows": 10,
+      "pageNo": 1,
+      "totalCount": 2
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL_SERVICE"
+    },
+    "body": {
+      "items": {
+        "item": [
+          {
+            "stationName": "종로구",
+            "mangName": "도시대기",
+            "dataTime": "2024-01-15 14:00",
+            "so2Value": "0.003",
+            "coValue": "0.5",
+            "o3Value": "0.025",
+            "no2Value": "0.028",
+            "pm10Value": "45",
+            "pm25Value": "22",
+            "khaiValue": "72",
+            "khaiGrade": "2",
+            "so2Grade": "1",
+            "coGrade": "1",
+            "o3Grade": "1",
+            "no2Grade": "1",
+            "pm10Grade": "2",
+            "pm25Grade": "2"
+          }
+        ]
+      },
+      "numOfRows": 10,
+      "pageNo": 1,
+      "totalCount": 1
+    }
+  }
+}
