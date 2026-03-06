@@ -7,6 +7,7 @@ import { ResponseParser } from './core/parser.js';
 import { WeatherAdapter } from './adapters/weather/index.js';
 import { BusinessAdapter } from './adapters/business/index.js';
 import { AddressAdapter } from './adapters/address/index.js';
+import { HolidayAdapter } from './adapters/holiday/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -73,6 +74,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'business',
       () => new BusinessAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Holiday adapter (한국천문연구원 API). */
+  get holiday(): HolidayAdapter {
+    return this.getOrCreateAdapter(
+      'holiday',
+      () => new HolidayAdapter(this.getAdapterContext()),
     );
   }
 
