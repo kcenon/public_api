@@ -75,6 +75,16 @@ export type {
   HolidayKind,
 } from './adapters/holiday/types.js';
 
+export { TransportAdapter } from './adapters/transport/index.js';
+export type {
+  BusArrivalParams,
+  BusArrival,
+  BusStopSearchParams,
+  BusStop,
+  BusRouteParams,
+  BusRoute,
+} from './adapters/transport/types.js';
+
 // Errors
 export {
   PublicDataError,

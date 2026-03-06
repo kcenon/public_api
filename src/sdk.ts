@@ -8,6 +8,7 @@ import { WeatherAdapter } from './adapters/weather/index.js';
 import { BusinessAdapter } from './adapters/business/index.js';
 import { AddressAdapter } from './adapters/address/index.js';
 import { HolidayAdapter } from './adapters/holiday/index.js';
+import { TransportAdapter } from './adapters/transport/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -82,6 +83,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'holiday',
       () => new HolidayAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Transport adapter (국토교통부 대중교통 API). */
+  get transport(): TransportAdapter {
+    return this.getOrCreateAdapter(
+      'transport',
+      () => new TransportAdapter(this.getAdapterContext()),
     );
   }
 
