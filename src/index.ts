@@ -23,6 +23,9 @@ export type {
   RawApiResponseBody,
 } from './types/response.js';
 
+// Core
+export { ResponseParser } from './core/parser.js';
+
 // Errors
 export {
   PublicDataError,
