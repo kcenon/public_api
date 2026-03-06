@@ -6,6 +6,7 @@ import { CacheManager } from './core/cache.js';
 import { ResponseParser } from './core/parser.js';
 import { WeatherAdapter } from './adapters/weather/index.js';
 import { BusinessAdapter } from './adapters/business/index.js';
+import { AddressAdapter } from './adapters/address/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -72,6 +73,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'business',
       () => new BusinessAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Address adapter (행정안전부 도로명주소 API). */
+  get address(): AddressAdapter {
+    return this.getOrCreateAdapter(
+      'address',
+      () => new AddressAdapter(this.getAdapterContext()),
     );
   }
 
