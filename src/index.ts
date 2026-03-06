@@ -27,6 +27,11 @@ export type {
 export { ResponseParser } from './core/parser.js';
 export { CacheManager, MemoryCacheAdapter } from './core/cache.js';
 export type { CacheAdapter, CacheStats } from './core/cache.js';
+export { CircuitBreaker } from './core/circuit-breaker.js';
+export type {
+  CircuitState,
+  CircuitStateChangeEvent,
+} from './core/circuit-breaker.js';
 
 // Errors
 export {
