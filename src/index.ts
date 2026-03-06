@@ -59,6 +59,15 @@ export type {
   BusinessValidation,
 } from './adapters/business/types.js';
 
+export { AddressAdapter } from './adapters/address/index.js';
+export type {
+  AddressSearchParams,
+  AddressResult,
+  AddressCoordinateParams,
+  AddressCoordinate,
+  EnglishAddressResult,
+} from './adapters/address/types.js';
+
 // Errors
 export {
   PublicDataError,
