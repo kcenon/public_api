@@ -9,6 +9,7 @@ import { BusinessAdapter } from './adapters/business/index.js';
 import { AddressAdapter } from './adapters/address/index.js';
 import { HolidayAdapter } from './adapters/holiday/index.js';
 import { TransportAdapter } from './adapters/transport/index.js';
+import { AirQualityAdapter } from './adapters/air-quality/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -99,6 +100,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'address',
       () => new AddressAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Air Quality adapter (한국환경공단 API). */
+  get airQuality(): AirQualityAdapter {
+    return this.getOrCreateAdapter(
+      'air-quality',
+      () => new AirQualityAdapter(this.getAdapterContext()),
     );
   }
 
