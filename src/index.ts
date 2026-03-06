@@ -22,3 +22,16 @@ export type {
   RawApiResponseHeader,
   RawApiResponseBody,
 } from './types/response.js';
+
+// Errors
+export {
+  PublicDataError,
+  AuthenticationError,
+  RateLimitError,
+  ValidationError,
+  NotFoundError,
+  ServiceUnavailableError,
+  NetworkError,
+  ParseError,
+  CircuitOpenError,
+} from './core/errors.js';
