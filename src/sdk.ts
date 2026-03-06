@@ -4,6 +4,7 @@ import type { AdapterContext } from './types/adapter.js';
 import { HttpClient } from './core/http-client.js';
 import { CacheManager } from './core/cache.js';
 import { ResponseParser } from './core/parser.js';
+import { WeatherAdapter } from './adapters/weather/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -55,6 +56,14 @@ export class PublicDataSDK {
       cache: this.cache,
       parser: this.parser,
     };
+  }
+
+  /** Lazily-loaded Weather adapter (기상청 API). */
+  get weather(): WeatherAdapter {
+    return this.getOrCreateAdapter(
+      'weather',
+      () => new WeatherAdapter(this.getAdapterContext()),
+    );
   }
 
   /** Get the cache manager for statistics and management. */

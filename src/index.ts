@@ -37,6 +37,17 @@ export type {
 // Adapters
 export { BaseAdapter } from './adapters/base.js';
 export type { AdapterRequestConfig } from './adapters/base.js';
+export { WeatherAdapter } from './adapters/weather/index.js';
+export type {
+  WeatherForecastParams,
+  WeatherForecast,
+  WeatherObservation,
+} from './adapters/weather/types.js';
+export {
+  latLngToGrid,
+  getCategoryName,
+  getValueDescription,
+} from './adapters/weather/utils.js';
 
 // Errors
 export {
