@@ -1,4 +1,5 @@
 import type { SDKConfig } from './types/config.js';
+import { ValidationError } from './core/errors.js';
 
 /** Default SDK configuration values. */
 export const DEFAULT_CONFIG = {
@@ -35,8 +36,47 @@ export function resolveConfig(config: SDKConfig): ResolvedConfig {
   const serviceKey = config.serviceKey ?? process.env.PUBLIC_DATA_API_KEY ?? '';
 
   if (!serviceKey) {
-    throw new Error(
+    throw new ValidationError(
       'Service key is required. Provide it via config.serviceKey or PUBLIC_DATA_API_KEY environment variable.',
+      { field: 'serviceKey' },
+    );
+  }
+
+  if (config.timeout !== undefined) {
+    validatePositiveNumber(config.timeout, 'timeout');
+  }
+
+  if (config.cache?.ttl !== undefined) {
+    validatePositiveNumber(config.cache.ttl, 'cache.ttl');
+  }
+
+  if (config.cache?.maxEntries !== undefined) {
+    validatePositiveInteger(config.cache.maxEntries, 'cache.maxEntries');
+  }
+
+  if (config.retry?.maxAttempts !== undefined) {
+    validatePositiveInteger(config.retry.maxAttempts, 'retry.maxAttempts');
+  }
+
+  if (config.retry?.baseDelay !== undefined) {
+    validatePositiveNumber(config.retry.baseDelay, 'retry.baseDelay');
+  }
+
+  if (config.retry?.maxDelay !== undefined) {
+    validatePositiveNumber(config.retry.maxDelay, 'retry.maxDelay');
+  }
+
+  if (config.circuitBreaker?.failureThreshold !== undefined) {
+    validatePositiveInteger(
+      config.circuitBreaker.failureThreshold,
+      'circuitBreaker.failureThreshold',
+    );
+  }
+
+  if (config.circuitBreaker?.resetTimeout !== undefined) {
+    validatePositiveNumber(
+      config.circuitBreaker.resetTimeout,
+      'circuitBreaker.resetTimeout',
     );
   }
 
@@ -69,4 +109,22 @@ export function resolveConfig(config: SDKConfig): ResolvedConfig {
         DEFAULT_CONFIG.circuitBreaker.halfOpenMaxAttempts,
     },
   };
+}
+
+function validatePositiveNumber(value: number, field: string): void {
+  if (!Number.isFinite(value) || value <= 0) {
+    throw new ValidationError(
+      `${field} must be a positive number, got ${value}`,
+      { field },
+    );
+  }
+}
+
+function validatePositiveInteger(value: number, field: string): void {
+  if (!Number.isInteger(value) || value <= 0) {
+    throw new ValidationError(
+      `${field} must be a positive integer, got ${value}`,
+      { field },
+    );
+  }
 }

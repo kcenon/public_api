@@ -22,6 +22,7 @@ export type {
   RawApiResponseHeader,
   RawApiResponseBody,
 } from './types/response.js';
+export type { AdapterContext } from './types/adapter.js';
 
 // Core
 export { ResponseParser } from './core/parser.js';
