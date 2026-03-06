@@ -49,6 +49,16 @@ export {
   getValueDescription,
 } from './adapters/weather/utils.js';
 
+export { BusinessAdapter } from './adapters/business/index.js';
+export type {
+  BusinessStatusParams,
+  BusinessStatus,
+  BusinessStatusType,
+  BusinessValidateParams,
+  BusinessValidateItem,
+  BusinessValidation,
+} from './adapters/business/types.js';
+
 // Errors
 export {
   PublicDataError,

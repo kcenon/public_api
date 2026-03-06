@@ -5,6 +5,7 @@ import { HttpClient } from './core/http-client.js';
 import { CacheManager } from './core/cache.js';
 import { ResponseParser } from './core/parser.js';
 import { WeatherAdapter } from './adapters/weather/index.js';
+import { BusinessAdapter } from './adapters/business/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -63,6 +64,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'weather',
       () => new WeatherAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Business Registration adapter (국세청 API). */
+  get business(): BusinessAdapter {
+    return this.getOrCreateAdapter(
+      'business',
+      () => new BusinessAdapter(this.getAdapterContext()),
     );
   }
 
