@@ -1,6 +1,6 @@
 {
   "name": "@kcenon/public-data-sdk",
-  "version": "0.1.0-beta.1",
+  "version": "1.0.0",
   "description": "TypeScript SDK for Korean Government Public Data APIs (공공데이터 SDK)",
   "type": "module",
   "main": "./dist/index.cjs",

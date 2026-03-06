@@ -6,7 +6,7 @@ import {
 } from './errors.js';
 import type { RetryConfig } from '../types/config.js';
 
-const SDK_VERSION = '0.0.1';
+const SDK_VERSION = '1.0.0';
 
 export interface HttpClientConfig {
   serviceKey: string;
