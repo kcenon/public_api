@@ -34,6 +34,10 @@ export type {
   CircuitStateChangeEvent,
 } from './core/circuit-breaker.js';
 
+// Adapters
+export { BaseAdapter } from './adapters/base.js';
+export type { AdapterRequestConfig } from './adapters/base.js';
+
 // Errors
 export {
   PublicDataError,
