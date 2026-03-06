@@ -1,0 +1,69 @@
+name: Bug Report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["type/bug", "status/needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please fill out the sections below.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Clear description of the bug
+      placeholder: Describe the bug...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: Minimal code to reproduce the issue
+      placeholder: |
+        ```typescript
+        const sdk = new PublicDataSDK({ serviceKey: '...' });
+        const result = await sdk.weather.getVilageFcst({ ... });
+        // Error: ...
+        ```
+    validations:
+      required: true
+
+  - type: dropdown
+    id: adapter
+    attributes:
+      label: Which adapter?
+      options:
+        - Weather
+        - Business
+        - Address
+        - Holiday
+        - Transport
+        - Air Quality
+        - Real Estate
+        - Core SDK
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: |
+        - SDK version: 1.0.0
+        - Node.js version: 22.x
+        - OS: macOS / Linux / Windows
+        - Package manager: npm / yarn / pnpm
+    validations:
+      required: true

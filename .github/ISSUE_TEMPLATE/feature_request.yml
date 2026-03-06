@@ -1,0 +1,48 @@
+name: Feature Request
+description: Suggest a new feature or enhancement
+title: "[Feature]: "
+labels: ["type/feature", "status/needs-triage"]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What feature do you want?
+      description: Clear description of the feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why do you need this?
+      description: Problem this solves or value it provides
+    validations:
+      required: true
+
+  - type: textarea
+    id: how
+    attributes:
+      label: Proposed solution
+      description: How should this work? (optional)
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other solutions you've considered
+
+  - type: dropdown
+    id: adapter
+    attributes:
+      label: Related adapter
+      options:
+        - Weather
+        - Business
+        - Address
+        - Holiday
+        - Transport
+        - Air Quality
+        - Real Estate
+        - Core SDK
+        - New Adapter
+        - Other

@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.0] - 2026-03-06
+
+First stable release. All APIs marked as production-ready.
+
+### Changed
+
+- Version bump from 0.1.0-beta.1 to 1.0.0 (stable)
+- Added GitHub issue templates for bug reports and feature requests
+
 ## [0.1.0-beta.1] - 2026-03-06
 
 ### Added
