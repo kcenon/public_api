@@ -85,6 +85,16 @@ export type {
   BusRoute,
 } from './adapters/transport/types.js';
 
+export { AirQualityAdapter } from './adapters/air-quality/index.js';
+export type {
+  AirQualityByStationParams,
+  AirQualityByRegionParams,
+  NearbyStationParams,
+  AirQualityData,
+  AirQualityGrade,
+  NearbyStation,
+} from './adapters/air-quality/types.js';
+
 // Errors
 export {
   PublicDataError,
