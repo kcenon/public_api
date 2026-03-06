@@ -28,6 +28,11 @@ export type { AdapterContext } from './types/adapter.js';
 export { ResponseParser } from './core/parser.js';
 export { CacheManager, MemoryCacheAdapter } from './core/cache.js';
 export type { CacheAdapter, CacheStats } from './core/cache.js';
+export { RedisCacheAdapter } from './core/redis-cache-adapter.js';
+export type {
+  RedisCacheConfig,
+  RedisLikeClient,
+} from './core/redis-cache-adapter.js';
 export { CircuitBreaker } from './core/circuit-breaker.js';
 export type {
   CircuitState,
