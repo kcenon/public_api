@@ -68,6 +68,13 @@ export type {
   EnglishAddressResult,
 } from './adapters/address/types.js';
 
+export { HolidayAdapter } from './adapters/holiday/index.js';
+export type {
+  HolidayParams,
+  Holiday,
+  HolidayKind,
+} from './adapters/holiday/types.js';
+
 // Errors
 export {
   PublicDataError,
