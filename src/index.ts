@@ -25,6 +25,8 @@ export type {
 
 // Core
 export { ResponseParser } from './core/parser.js';
+export { CacheManager, MemoryCacheAdapter } from './core/cache.js';
+export type { CacheAdapter, CacheStats } from './core/cache.js';
 
 // Errors
 export {
