@@ -10,6 +10,7 @@ import { AddressAdapter } from './adapters/address/index.js';
 import { HolidayAdapter } from './adapters/holiday/index.js';
 import { TransportAdapter } from './adapters/transport/index.js';
 import { AirQualityAdapter } from './adapters/air-quality/index.js';
+import { RealEstateAdapter } from './adapters/real-estate/index.js';
 
 /**
  * Main entry point for the Public Data SDK.
@@ -100,6 +101,14 @@ export class PublicDataSDK {
     return this.getOrCreateAdapter(
       'address',
       () => new AddressAdapter(this.getAdapterContext()),
+    );
+  }
+
+  /** Lazily-loaded Real Estate adapter (국토교통부 부동산 실거래가 API). */
+  get realEstate(): RealEstateAdapter {
+    return this.getOrCreateAdapter(
+      'real-estate',
+      () => new RealEstateAdapter(this.getAdapterContext()),
     );
   }
 

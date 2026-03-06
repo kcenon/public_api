@@ -85,6 +85,13 @@ export type {
   BusRoute,
 } from './adapters/transport/types.js';
 
+export { RealEstateAdapter } from './adapters/real-estate/index.js';
+export type {
+  RealEstateParams,
+  RealEstateTransaction,
+  DealType,
+} from './adapters/real-estate/types.js';
+
 export { AirQualityAdapter } from './adapters/air-quality/index.js';
 export type {
   AirQualityByStationParams,
