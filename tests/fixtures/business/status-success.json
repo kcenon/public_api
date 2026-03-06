@@ -1,0 +1,20 @@
+{
+  "status_code": "OK",
+  "match_cnt": 1,
+  "request_cnt": 1,
+  "data": [
+    {
+      "b_no": "1234567890",
+      "b_stt": "계속사업자",
+      "b_stt_cd": "01",
+      "tax_type": "부가가치세 일반과세자",
+      "tax_type_cd": "01",
+      "end_dt": "",
+      "utcc_yn": "N",
+      "tax_type_change_dt": "",
+      "invoice_apply_dt": "20200101",
+      "rbf_tax_type": "",
+      "rbf_tax_type_cd": ""
+    }
+  ]
+}

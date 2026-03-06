@@ -1,0 +1,49 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "00",
+      "resultMsg": "NORMAL_SERVICE"
+    },
+    "body": {
+      "items": {
+        "item": [
+          {
+            "dealAmount": "    18,000",
+            "buildYear": 2005,
+            "dealYear": 2024,
+            "dealMonth": 1,
+            "dealDay": 10,
+            "aptNm": "래미안",
+            "excluUseAr": "84.99",
+            "floor": "12",
+            "jibun": "123",
+            "sggCd": "11680",
+            "umdNm": "역삼동",
+            "roadNm": "테헤란로",
+            "roadNmBonbun": "131",
+            "roadNmBubun": "0"
+          },
+          {
+            "dealAmount": "    12,500",
+            "buildYear": 2010,
+            "dealYear": 2024,
+            "dealMonth": 1,
+            "dealDay": 15,
+            "aptNm": "삼성래미안",
+            "excluUseAr": "59.97",
+            "floor": "7",
+            "jibun": "456",
+            "sggCd": "11680",
+            "umdNm": "대치동",
+            "roadNm": "남부순환로",
+            "roadNmBonbun": "2928",
+            "roadNmBubun": "0"
+          }
+        ]
+      },
+      "numOfRows": 10,
+      "pageNo": 1,
+      "totalCount": 2
+    }
+  }
+}

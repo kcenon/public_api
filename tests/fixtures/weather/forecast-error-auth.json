@@ -1,0 +1,9 @@
+{
+  "response": {
+    "header": {
+      "resultCode": "20",
+      "resultMsg": "SERVICE_KEY_IS_NOT_REGISTERED_ERROR"
+    },
+    "body": {}
+  }
+}

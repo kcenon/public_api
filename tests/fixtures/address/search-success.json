@@ -1,0 +1,65 @@
+{
+  "results": {
+    "common": {
+      "errorCode": "0",
+      "errorMessage": "정상",
+      "totalCount": "2",
+      "currentPage": "1",
+      "countPerPage": "10"
+    },
+    "juso": [
+      {
+        "roadAddr": "서울특별시 강남구 테헤란로 131 (역삼동, 한국지식재산센터)",
+        "roadAddrPart1": "서울특별시 강남구 테헤란로 131",
+        "roadAddrPart2": "(역삼동, 한국지식재산센터)",
+        "jibunAddr": "서울특별시 강남구 역삼동 647-9 한국지식재산센터",
+        "engAddr": "131, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea",
+        "zipNo": "06133",
+        "admCd": "1168010100",
+        "rnMgtSn": "116804163237",
+        "bdMgtSn": "1168010100106470009000001",
+        "detBdNmList": "한국지식재산센터",
+        "bdNm": "한국지식재산센터",
+        "bdKdcd": "0",
+        "siNm": "서울특별시",
+        "sggNm": "강남구",
+        "emdNm": "역삼동",
+        "liNm": "",
+        "rn": "테헤란로",
+        "udrtYn": "0",
+        "buldMnnm": "131",
+        "buldSlno": "0",
+        "mtYn": "0",
+        "lnbrMnnm": "647",
+        "lnbrSlno": "9",
+        "emdNo": "01"
+      },
+      {
+        "roadAddr": "서울특별시 강남구 테헤란로 131 (역삼동)",
+        "roadAddrPart1": "서울특별시 강남구 테헤란로 131",
+        "roadAddrPart2": "(역삼동)",
+        "jibunAddr": "서울특별시 강남구 역삼동 647-9",
+        "engAddr": "131, Teheran-ro, Gangnam-gu, Seoul, Republic of Korea",
+        "zipNo": "06133",
+        "admCd": "1168010100",
+        "rnMgtSn": "116804163237",
+        "bdMgtSn": "1168010100106470009000002",
+        "detBdNmList": "",
+        "bdNm": "",
+        "bdKdcd": "0",
+        "siNm": "서울특별시",
+        "sggNm": "강남구",
+        "emdNm": "역삼동",
+        "liNm": "",
+        "rn": "테헤란로",
+        "udrtYn": "0",
+        "buldMnnm": "131",
+        "buldSlno": "0",
+        "mtYn": "0",
+        "lnbrMnnm": "647",
+        "lnbrSlno": "9",
+        "emdNo": "01"
+      }
+    ]
+  }
+}
