@@ -1,3 +1,5 @@
+> Status: archived 2026-09. No further maintenance; kept for reference.
+
 # @kcenon/public-data-sdk
 
 TypeScript SDK for Korean Government Public Data APIs (공공데이터 SDK)
